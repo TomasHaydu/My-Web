@@ -61,7 +61,8 @@ const ProviderLang = {
         LinkedIn:"https://www.linkedin.com/in/tomás-haydukiewicz-b11561267/",
         subject: "Subject",
         compose: "Compose email",
-        send: "Submit"
+        send: "Submit",
+        email: "Your e-mail"
       },
       footer: {
         text:"Design and construction by Tomás Haydukiewicz | 2023",
@@ -128,7 +129,8 @@ const ProviderLang = {
         LinkedIn:"https://www.linkedin.com/in/tomás-haydukiewicz-b11561267/",
         subject: "Asunto",
         compose: "Escriba su mensaje...",
-        send: "Enviar"
+        send: "Enviar",
+        email: "Tu e-mail"
       },
       footer: {
         text:"Diseñado y construido por Tomás Haydukiewicz | 2023",

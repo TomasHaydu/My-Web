@@ -38,6 +38,8 @@ function App() {
 
   const [dark, setDark] = useState(false);
 
+  const [menuResponsive, setMenuResponsive] = useState(false);
+
   const changeLang = () => {
     if (language == "eng") {
       setLanguage("esp");
@@ -65,43 +67,37 @@ function App() {
             <img src={Avatar1} alt="logo-avatar" className="header__logo" />
           </a>
         </div>
-        <div className="header__nav">
-          <ul className="header__nav__ul">
-            <li className="header__nav__ul__li">
-              <a href="#home" className="header__nav__ul__li__a">
-                {getText("header", "home")}
-              </a>
-            </li>
-          </ul>
-          <ul className="header__nav__ul">
-            <li className="header__nav__ul__li">
-              <a href="#portfolio" className="header__nav__ul__li__a">
-                {getText("header", "portfolio")}
-              </a>
-            </li>
-          </ul>
-          <ul className="header__nav__ul">
-            <li className="header__nav__ul__li">
-              <a href="#skills" className="header__nav__ul__li__a">
-                {getText("header", "skills")}
-              </a>
-            </li>
-          </ul>
-          <ul className="header__nav__ul">
-            <li className="header__nav__ul__li">
-              <a href="#about" className="header__nav__ul__li__a">
-                {getText("header", "aboutMe")}
-              </a>
-            </li>
-          </ul>
-          <ul className="header__nav__ul">
-            <li className="header__nav__ul__li">
-              <a href="#contact" className="header__nav__ul__li__a">
-                {getText("header", "contact")}
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul className={menuResponsive ? "header__nav-active" :"header__nav"}>
+          <li className="header__nav__li">
+            <a href="#home" className="header__nav__li__a">
+              {getText("header", "home")}
+            </a>
+          </li>
+
+          <li className="header__nav__li">
+            <a href="#portfolio" className="header__nav__li__a">
+              {getText("header", "portfolio")}
+            </a>
+          </li>
+
+          <li className="header__nav__li">
+            <a href="#skills" className="header__nav__li__a">
+              {getText("header", "skills")}
+            </a>
+          </li>
+
+          <li className="header__nav__li">
+            <a href="#about" className="header__nav__li__a">
+              {getText("header", "aboutMe")}
+            </a>
+          </li>
+
+          <li className="header__nav__li">
+            <a href="#contact" className="header__nav__li__a">
+              {getText("header", "contact")}
+            </a>
+          </li>
+        </ul>
         <div className="header__img">
           <img
             src={language == "eng" ? ESP : ENG}
@@ -115,12 +111,33 @@ function App() {
             className={dark ? "header__img-theme-dark" : "header__img-theme"}
             onClick={() => setDark(!dark)}
           />
+          <button
+            className="header__menu"
+            onClick={() => setMenuResponsive(!menuResponsive)}
+          >
+            <div
+              className={
+                menuResponsive
+                  ? "header__menu__div header__menu__div-1"
+                  : "header__menu__div"
+              }
+            ></div>
+            <div
+              className={
+                menuResponsive
+                  ? "header__menu__div header__menu__div-2"
+                  : "header__menu__div"
+              }
+            ></div>
+            <div
+              className={
+                menuResponsive
+                  ? "header__menu__div header__menu__div-3"
+                  : "header__menu__div"
+              }
+            ></div>
+          </button>
         </div>
-        <button className="header__menu">
-          <div></div>
-          <div></div>
-          <div></div>
-        </button>
       </nav>
       <div className="scroll">
         <div className="home">
@@ -200,6 +217,7 @@ function App() {
                     <p className="portfolio__container__projects__project__hover-text">
                       {project.description}
                     </p>
+                    <div>
                     <a
                       href={project.demo}
                       target="_blank"
@@ -214,6 +232,7 @@ function App() {
                     >
                       GitHub
                     </a>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -232,7 +251,7 @@ function App() {
                   value="eng"
                   className="portfolio__container__cv__ENG"
                   checked={cvLang == "eng" ? true : false}
-                  onChange={(e)=> setCvLang(e.target.value)}
+                  onChange={(e) => setCvLang(e.target.value)}
                 />
                 <label className="portfolio__container__cv__label">ESP</label>
                 <input
@@ -240,7 +259,7 @@ function App() {
                   value="esp"
                   className="portfolio__container__cv__ESP"
                   checked={cvLang == "esp" ? true : false}
-                  onChange={(e)=> setCvLang(e.target.value)}
+                  onChange={(e) => setCvLang(e.target.value)}
                 />
               </div>
             </div>
@@ -294,7 +313,11 @@ function App() {
                       alt="react"
                       className="skills__container__know__tec__logo"
                     />
-                    <img src={Redux} alt="redux" className="skills__container__know__tec__logo" />
+                    <img
+                      src={Redux}
+                      alt="redux"
+                      className="skills__container__know__tec__logo"
+                    />
                     <label className="skills__container__know__tec__label">
                       React (Redux)
                     </label>
@@ -477,7 +500,7 @@ function App() {
                 <input
                   type="email"
                   className="contact__container__form__section-input"
-                  placeholder="E-mail"
+                  placeholder={getText("contact", "email")}
                   name="email"
                 />
               </div>
