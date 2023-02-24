@@ -100,13 +100,13 @@ function App() {
         </ul>
         <div className="header__img">
           <img
-            src={language == "eng" ? ESP : ENG}
+            src={language == "eng" ? ENG : ESP}
             alt="ESP/ENG"
             className={dark ? "header__img-eng-dark" : "header__img-eng"}
             onClick={() => changeLang()}
           />
           <img
-            src={dark ? Light : Dark}
+            src={dark ? Dark : Light}
             alt="light/dark mode"
             className={dark ? "header__img-theme-dark" : "header__img-theme"}
             onClick={() => setDark(!dark)}
