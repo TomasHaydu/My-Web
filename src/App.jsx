@@ -50,7 +50,7 @@ function App() {
   };
 
   const openPDF = () => {
-    window.open(`../src/documents/curriculum-${cvLang}.pdf`, "_blank");
+    window.open(`../public/documents/curriculum-${cvLang}.pdf`, "_blank");
   };
 
   const getText = (indication1, indication2) => {
