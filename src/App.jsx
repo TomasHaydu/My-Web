@@ -1,6 +1,5 @@
 import Avatar1 from "../src/img/logo/avatar-normal.svg";
-import AvatarHover from "../src/img/logo/avatar-hover.svg";
-import MyPhoto from "../src/img/my-photo.jpg";
+import MyPhoto from "../src/img/myPhoto.jpg";
 import ESP from "../src/img/icons/ESP-mode.svg";
 import ENG from "../src/img/icons/ENG-mode.svg";
 import Dark from "../src/img/icons/dark-mode.svg";
