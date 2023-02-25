@@ -14,14 +14,6 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 
-#body {
-  margin: 0px;
-  padding: 0px;
-  font-size: 16px;
-  background-color: black;
-  font-family: "PT Sans", sans-serif;
-}
-
 .web {
   --yellow: rgb(255, 221, 64);
   --green: rgb(0, 173, 170);
@@ -892,7 +884,7 @@ body {
 /* RESPONSIVE DESING */
 @media (min-width: 1200px) { 
 
-  #body {
+  body {
     font-size: 18px;
     background: #5e3939;
     width: 100vw;
@@ -902,7 +894,7 @@ body {
 
 @media (max-width: 1024px) { 
 
-  #body {
+  body {
     font-size: 14px;
     background: #5e3939;
     width: 100vw;
@@ -1419,7 +1411,7 @@ display: none;
  
 @media (max-width: 768px) {
 
-  #body {
+  body {
     font-size: 12px;
     background: #5e3939;
     width: 100vw;

@@ -59,7 +59,7 @@ function App() {
   };
 
   return (
-    <div className={dark ? "web-dark" : "web"} id="body">
+    <div className={dark ? "web-dark" : "web"}>
       <nav className="header">
         <div>
           <a href="#home">
