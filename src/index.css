@@ -882,15 +882,6 @@ body {
 
 
 /* RESPONSIVE DESING */
-@media (min-width: 1200px) { 
-
-  body {
-    font-size: 18px;
-    background: #5e3939;
-    width: 100vw;
-  }
-}
-
 
 @media (max-width: 1024px) { 
 
