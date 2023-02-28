@@ -404,9 +404,6 @@ function App() {
               </p>
               <p className="skills__container__less__material">. Material UI</p>
               <p className="skills__container__less__jest">. Jest</p>
-              <p className="skills__container__less__typescript">
-                . TypeScript
-              </p>
             </div>
           </div>
         </div>

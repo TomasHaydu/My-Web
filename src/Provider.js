@@ -27,14 +27,14 @@ const ProviderLang = {
             description:"Add your tasks. Edit, delete, and check them as completed. Everything for your organization.",
             img: Tareas ,
             github:"https://github.com/TomasHaydu/Lista-de-Tareas-React-.git",
-            demo:""
+            demo:"https://tranquil-mousse-c94962.netlify.app/"
           },
            {
             title:"Poke-Finder",
             description:"A simple pokemon search engine, to enjoy many of its features and powers.",
             img: Poke ,
             github:"https://github.com/TomasHaydu/Pokemons-Finder",
-            demo:""
+            demo:"https://silver-frangollo-ee0b0b.netlify.app/"
           },
            {
             title:"Patients-Psico",
@@ -95,14 +95,14 @@ const ProviderLang = {
             description:"Agregar tus tareas, editarlas, eliminarlas y marcarlas como realizadas. Todo para organizarte.",
             img: Tareas ,
             github:"https://github.com/TomasHaydu/Lista-de-Tareas-React-.git",
-            demo:""
+            demo:"https://tranquil-mousse-c94962.netlify.app/"
           },
            {
             title:"Poke-Finder",
             description:"Un buscador simple de pokemones, para poder disfrutar de muchas de sus características y valores.",
             img: Poke ,
             github:"https://github.com/TomasHaydu/Pokemons-Finder",
-            demo:""
+            demo:"https://silver-frangollo-ee0b0b.netlify.app/"
           },
            {
             title:"Pacientes-Psico",
