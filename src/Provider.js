@@ -47,12 +47,12 @@ const ProviderLang = {
       },
       skills: {
         title:"Skills",
-        less:"Less... :"
+        less:"Basic proficiency :"
       },
       aboutMe: {
         title:"About Me",
         im:"I'm Tomás Haydukiewicz, I'm 25 years old, I was born in Bahía Blanca, Buenos Aires, Argentina and actually I live in Ciudad Autonoma de Buenos Aires, Buenos Aires, Argentina.",
-        description:"I started studying programming because I had curiosity about this world, i always liked knowing how technology works. At first i couldn't find teachers who could motivate me and keep me inside this, until i found an online course that took all my attention and motivation. Currently i believe i found my job vocation, cause i really enjoy programming and i am so motivated to continue learning about IT world."
+        description:"I started studying programming because I had curiosity about this world, I always liked knowing how technology works. At first I couldn't find teachers who could motivate me and keep me inside this, until I found an online course that took all my attention and motivation. Currently I believe I found my job vocation, cause I really enjoy programming and I am so motivated to continue learning about IT world."
       },
       contact: {
         info:"Contact Info",

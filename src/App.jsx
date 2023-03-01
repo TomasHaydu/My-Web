@@ -322,9 +322,6 @@ function App() {
                       React (Redux)
                     </label>
                     <div className="skills__container__know__react__container">
-                      <p className="skills__container__know__react__container-redux">
-                        . Redux
-                      </p>
                       <p className="skills__container__know__react__container-context">
                         . Context
                       </p>

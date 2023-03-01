@@ -502,12 +502,6 @@ body {
   justify-content: center;
 }
 
-.skills__container__know__react__container-redux {
-  display: flex;
-  font-size: 0.9em;
-  margin: 4%;
-}
-
 .skills__container__know__react__container-router {
   display: flex;
   font-size: 0.9em;
