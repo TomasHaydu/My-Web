@@ -62,7 +62,7 @@ const ProviderLang = {
         subject: "Subject",
         compose: "Compose email",
         send: "Submit",
-        email: "Your e-mail"
+        yourEmail: "Your e-mail"
       },
       footer: {
         text:"Design and construction by Tomás Haydukiewicz | 2023",
@@ -130,7 +130,7 @@ const ProviderLang = {
         subject: "Asunto",
         compose: "Escriba su mensaje...",
         send: "Enviar",
-        email: "Tu e-mail"
+        yourEmail: "Tu e-mail"
       },
       footer: {
         text:"Diseñado y construido por Tomás Haydukiewicz | 2023",

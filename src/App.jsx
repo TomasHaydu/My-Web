@@ -39,6 +39,7 @@ function App() {
 
   const [menuResponsive, setMenuResponsive] = useState(false);
 
+
   const changeLang = () => {
     if (language == "eng") {
       setLanguage("esp");
@@ -496,7 +497,7 @@ function App() {
                 <input
                   type="email"
                   className="contact__container__form__section-input"
-                  placeholder={getText("contact", "email")}
+                  placeholder={getText("contact", "yourEmail")}
                   name="email"
                 />
               </div>
