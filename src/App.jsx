@@ -39,6 +39,7 @@ function App() {
 
   const [menuResponsive, setMenuResponsive] = useState(false);
 
+  const [form,setForm] = useState({})
 
   const changeLang = () => {
     if (language == "eng") {
@@ -51,7 +52,7 @@ function App() {
   };
 
   const openPDF = () => {
-    window.open(`/cvs/curriculum-${cvLang}.pdf`, "_blank");
+    window.open(`/cvs/cv-${cvLang}.pdf`, "_blank");
   };
 
   const getText = (indication1, indication2) => {
@@ -221,7 +222,7 @@ function App() {
                     <a
                       href={project.demo}
                       target="_blank"
-                      className="portfolio__container__projects__project__hover-button"
+                      className={project.demo === "" ? "portfolio__container__projects__project__hover-button patients" : "portfolio__container__projects__project__hover-button" }
                     >
                       Demo
                     </a>
@@ -402,6 +403,7 @@ function App() {
               </p>
               <p className="skills__container__less__material">. Material UI</p>
               <p className="skills__container__less__jest">. Jest</p>
+              <p className="skills__container__less__typescript">. TypeScript</p>
             </div>
           </div>
         </div>
@@ -496,6 +498,7 @@ function App() {
                   className="contact__container__form__section-input"
                   placeholder={getText("contact", "yourEmail")}
                   name="email"
+                  onChange={(e)=> setForm(...from,e.target.name)}
                 />
               </div>
               <div className="contact__container__form__section">
@@ -532,7 +535,7 @@ function App() {
           <footer className="footer">
             <div className="footer__presentation">
               <p className="footer__presentation-text">
-                {getText("footer", "text")}{" "}
+                {getText("footer", "text")}
               </p>
             </div>
             <div className="footer__social">
@@ -548,7 +551,7 @@ function App() {
                 />
               </a>
               <a
-                href="https://www.instagram.com/tomashaydu/"
+                href="https://www.facebook.com/tomashaydu"
                 target="_blank"
                 className="footer__social-fb"
               >

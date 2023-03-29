@@ -9,7 +9,7 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  font-size: 16px;
+  font-size: 22px;
   background-color: black;
   font-family: "PT Sans", sans-serif;
 }
@@ -178,7 +178,9 @@ body {
   height: 88vh;
   margin-top: -4%;
   scroll-snap-align: start;
+  
 }
+
 
 .home__content {
   display: flex;
@@ -225,6 +227,9 @@ body {
 .home__content__text__presentation__name {
   font-family: var(--titles);
   font-size: 2.2em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .home__content__text__presentation__name:hover {
@@ -388,6 +393,10 @@ body {
 
 .portfolio__container__projects__project__hover-button:hover {
   background: rgba(0, 0, 0, 0.9);
+}
+
+.patients {
+  cursor: not-allowed;
 }
 
 .portfolio__container__cv {
@@ -618,6 +627,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1em;
 }
 
 .contact__container__info-title {
@@ -670,6 +680,7 @@ body {
 
 .contact__container__form__section-input {
   padding: 1.5%;
+  font-size: 1em;
   width: 60%;
   border: none;
   border-bottom: 0.188em solid var(--gray);
@@ -690,6 +701,7 @@ body {
 
 .contact__container__form__section-textarea {
   padding: 3%;
+  font-size: 1.1em;
   width: 58%;
   border: none;
   border-bottom: 0.188em solid var(--gray);
@@ -876,6 +888,13 @@ body {
 
 
 /* RESPONSIVE DESING */
+
+@media (max-width: 1240px) {
+  body{
+    font-size: 16px;
+  }  
+}
+
 
 @media (max-width: 1024px) { 
 

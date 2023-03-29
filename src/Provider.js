@@ -23,18 +23,18 @@ const ProviderLang = {
         title : "Portfolio",
         projects : [
            {
-            title:"lista-de-tareas",
+            title:"Lista-De-Tareas",
             description:"Add your tasks. Edit, delete, and check them as completed. Everything for your organization.",
             img: Tareas ,
             github:"https://github.com/TomasHaydu/Lista-de-Tareas-React-.git",
-            demo:"https://tranquil-mousse-c94962.netlify.app/"
+            demo:"https://tranquil-mousse-c94962.netlify.app"
           },
            {
             title:"Poke-Finder",
             description:"A simple pokemon search engine, to enjoy many of its features and powers.",
             img: Poke ,
             github:"https://github.com/TomasHaydu/Pokemons-Finder",
-            demo:"https://silver-frangollo-ee0b0b.netlify.app/"
+            demo:"https://silver-frangollo-ee0b0b.netlify.app"
           },
            {
             title:"Patients-Psico",
@@ -58,7 +58,7 @@ const ProviderLang = {
         info:"Contact Info",
         city:"Buenos Aires, Argentina",
         email:"tomashaydu@gmail.com",
-        LinkedIn:"https://www.linkedin.com/in/tomás-haydukiewicz-b11561267/",
+        LinkedIn:"https://www.linkedin.com/in/tomas-haydu",
         subject: "Subject",
         compose: "Compose email",
         send: "Submit",
@@ -91,21 +91,21 @@ const ProviderLang = {
         title : "Portfolio",
         projects : [
            {
-            title:"lista-de-tareas",
+            title:"Lista-De-Tareas",
             description:"Agregar tus tareas, editarlas, eliminarlas y marcarlas como realizadas. Todo para organizarte.",
             img: Tareas ,
             github:"https://github.com/TomasHaydu/Lista-de-Tareas-React-.git",
-            demo:"https://tranquil-mousse-c94962.netlify.app/"
+            demo:"https://tranquil-mousse-c94962.netlify.app"
           },
            {
             title:"Poke-Finder",
             description:"Un buscador simple de pokemones, para poder disfrutar de muchas de sus características y valores.",
             img: Poke ,
             github:"https://github.com/TomasHaydu/Pokemons-Finder",
-            demo:"https://silver-frangollo-ee0b0b.netlify.app/"
+            demo:"https://silver-frangollo-ee0b0b.netlify.app"
           },
            {
-            title:"Pacientes-Psico",
+            title:"Patients-Psico",
             description:"Un lugar donde llevar un registro de tus pacientes, su información y administrar las sesiones que han tenido.",
             img: Patient ,
             github:"https://github.com/TomasHaydu/Patients-Psico.git",
@@ -126,7 +126,7 @@ const ProviderLang = {
         info:"Info de Contacto",
         city:"Buenos Aires, Argentina",
         email:"tomashaydu@gmail.com",
-        LinkedIn:"https://www.linkedin.com/in/tomás-haydukiewicz-b11561267/",
+        LinkedIn:"https://www.linkedin.com/in/tomas-haydu",
         subject: "Asunto",
         compose: "Escriba su mensaje...",
         send: "Enviar",

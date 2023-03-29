@@ -1,5 +1,6 @@
 {
   "name": "my-web-page",
+  "homepage": "https://tomashaydu.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",
