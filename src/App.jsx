@@ -9,6 +9,7 @@ import Laptop from "../src/img/decoration/laptop.svg";
 import JS from "../src/img/icons/javascript.svg";
 import CSS from "../src/img/icons/css3.svg";
 import HTML from "../src/img/icons/html5.svg";
+import Typescript from "../src/img/icons/typescript.svg"
 import ReactLogo from "../src/img/icons/react.svg";
 import Redux from "../src/img/icons/redux-icon.svg";
 import Git from "../src/img/icons/git.svg";
@@ -16,6 +17,8 @@ import GitHub from "../src/img/icons/github.svg";
 import Tailwind from "../src/img/icons/tailwindcss.svg";
 import Cypress from "../src/img/icons/cypress.svg";
 import Vite from "../src/img/icons/vite.svg";
+import Sass from "../src/img/icons/sass.svg";
+import NextJS from "../src/img/icons/nextjs.svg";
 import Coffee from "../src/img/decoration/coffee.svg";
 import API from "../src/img/decoration/api.svg";
 import Keyboard from "../src/img/decoration/keyboard.svg";
@@ -29,6 +32,7 @@ import Facebook from "../src/img/icons/facebook-icon.svg";
 import ProviderLang from "../src/Provider.js";
 
 import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 function App() {
   const [language, setLanguage] = useState("eng");
@@ -39,7 +43,17 @@ function App() {
 
   const [menuResponsive, setMenuResponsive] = useState(false);
 
-  const [form,setForm] = useState({})
+  const {ref:portfolioAnim, inView:portfolioView} = useInView()
+  const {ref:skillsAnim, inView:skillsView} = useInView()
+  const {ref:aboutAnim, inView:aboutView} = useInView()
+
+  const {ref:homeCompoAnim, inView:homeCompoView} = useInView()
+  const {ref:portfolioCompAnim, inView:portfolioCompoView} = useInView()
+  const {ref:skillsCompoAnim, inView:skillsCompoView} = useInView()
+  const {ref:aboutCompoAnim, inView:aboutCompoView} = useInView()
+  const {ref:contactCompoAnim, inView:contactCompoView} = useInView()
+
+  const {ref:iconAnim, inView:iconView} = useInView()
 
   const changeLang = () => {
     if (language == "eng") {
@@ -68,7 +82,7 @@ function App() {
             <img src={Avatar1} alt="logo-avatar" className="header__logo" />
           </a>
         </div>
-        <ul className={menuResponsive ? "header__nav-active" :"header__nav"}>
+        <ul className={menuResponsive ? "header__nav-active" : "header__nav"}>
           <li className="header__nav__li">
             <a href="#home" className="header__nav__li__a">
               {getText("header", "home")}
@@ -141,11 +155,11 @@ function App() {
         </div>
       </nav>
       <div className="scroll">
-        <div className="home">
+        <div className={homeCompoView ? "home component-home-in" : "home"} ref={homeCompoAnim}>
           <p id="home" className="help">
             .
           </p>
-          <div className="home__content" id="home">
+          <div className="home__content" id="home" >
             <div className="home__content__text">
               <div className="home__content__text__presentation">
                 <h1 className="home__content__text__presentation__title">
@@ -188,9 +202,9 @@ function App() {
         <p id="portfolio" className="help">
           .
         </p>
-        <div className="portfolio" id="portfolio">
+        <div className="portfolio" id="portfolio" ref={portfolioCompAnim}>
           <div className="portfolio__title">
-            <h2 className="portfolio__title__text">
+            <h2 className={portfolioView ? "portfolio__title__text title-in" : "portfolio__title__text"} ref={portfolioAnim}>
               {getText("portfolio", "title")}
             </h2>
             <img
@@ -200,7 +214,7 @@ function App() {
             />
           </div>
           <div className="portfolio__container">
-            <div className="portfolio__container__projects">
+            <div className={portfolioCompoView ? "portfolio__container__projects component-portfolio-in" : "portfolio__container__projects"}>
               {ProviderLang[language].portfolio.projects.map((project) => (
                 <div
                   className="portfolio__container__projects__project"
@@ -219,26 +233,30 @@ function App() {
                       {project.description}
                     </p>
                     <div>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      className={project.demo === "" ? "portfolio__container__projects__project__hover-button patients" : "portfolio__container__projects__project__hover-button" }
-                    >
-                      Demo
-                    </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      className="portfolio__container__projects__project__hover-button"
-                    >
-                      GitHub
-                    </a>
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        className={
+                          project.demo === ""
+                            ? "portfolio__container__projects__project__hover-button patients"
+                            : "portfolio__container__projects__project__hover-button"
+                        }
+                      >
+                        Demo
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        className="portfolio__container__projects__project__hover-button"
+                      >
+                        GitHub
+                      </a>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="portfolio__container__cv">
+            <div className={portfolioCompoView ? "portfolio__container__cv component-cv-in" : "portfolio__container__cv"} >
               <label className="portfolio__container__cv__label">CV</label>
               <a
                 className="portfolio__container__cv__button"
@@ -270,12 +288,12 @@ function App() {
         <p id="skills" className="help">
           .
         </p>
-        <div className="skills" id="skills">
+        <div className="skills" id="skills" ref={skillsCompoAnim}>
           <div className="skills__title">
-            <h2 className="skills__title-text">{getText("skills", "title")}</h2>
+            <h2 className={skillsView ? "skills__title-text title-in" : "skills__title-text"} ref={skillsAnim}>{getText("skills", "title")} </h2>
           </div>
           <div className="skills__container">
-            <div className="skills__container__know">
+            <div className={skillsCompoView ? "skills__container__know component-skills-in" : "skills__container__know"}>
               <div className="skills__container__know-1">
                 <div className="skills__container__know__tec">
                   <img
@@ -307,6 +325,7 @@ function App() {
                     CSS
                   </label>
                 </div>
+
                 <div className="skills__container__know__tec">
                   <div className="skills__container__know__react">
                     <img
@@ -366,6 +385,18 @@ function App() {
                 </div>
                 <div className="skills__container__know__tec">
                   <img
+                    src={Typescript}
+                    alt="typescript"
+                    className="skills__container__know__tec__logo"
+                  />
+                  <label className="skills__container__know__tec__label">
+                    Typescript
+                  </label>
+                </div>
+              </div>
+              <div className="skills__container__know-3">
+              <div className="skills__container__know__tec">
+                  <img
                     src={Cypress}
                     alt="cypress"
                     className="skills__container__know__tec__logo"
@@ -374,7 +405,7 @@ function App() {
                     Cypress
                   </label>
                 </div>
-                <div className="skills__container__know__tec">
+              <div className="skills__container__know__tec">
                   <img
                     src={Vite}
                     alt="vite"
@@ -384,40 +415,42 @@ function App() {
                     Vite
                   </label>
                 </div>
+                <div className="skills__container__know__tec">
+                  <img
+                    src={Sass}
+                    alt="sass"
+                    className="skills__container__know__tec__logo"
+                  />
+                  <label className="skills__container__know__tec__label">
+                    Sass
+                  </label>
+                </div>
+                <div className="skills__container__know__tec">
+                  <img
+                    src={NextJS}
+                    alt="nextjs"
+                    className="skills__container__know__tec__logo"
+                  />
+                  <label className="skills__container__know__tec__label">
+                    NextJS
+                  </label>
+                </div>
               </div>
             </div>
-            <p
-              src="divider"
-              alt="divider"
-              className="skills__container__divider"
-            >
-              ----------------
-            </p>
-            <div className="skills__container__less">
-              <h3 className="skills__container__less__title">
-                {getText("skills", "less")}
-              </h3>
-              <p className="skills__container__less__sass">. Sass</p>
-              <p className="skills__container__less__styled">
-                . Styled Components
-              </p>
-              <p className="skills__container__less__material">. Material UI</p>
-              <p className="skills__container__less__jest">. Jest</p>
-              <p className="skills__container__less__typescript">. TypeScript</p>
-            </div>
           </div>
+          <div className="skills__container__less"></div>
         </div>
         <p id="about" className="help">
           .
         </p>
-        <div className="about" id="aboutme">
+        <div className="about" id="aboutme" ref={aboutCompoAnim}>
           <div className="about__decoration">
             <img src={Coffee} alt="coffee" className="about__decoration__img" />
             <img src={Coding} alt="coding" className="about__decoration__img" />
           </div>
           <div className="about__text">
-            <h2 className="about__text-title">{getText("aboutMe", "title")}</h2>
-            <p className="about__text-description">
+            <h2 className={aboutView ? "about__text-title title-in" : "about__text-title"} ref={aboutAnim}>{getText("aboutMe", "title")}</h2>
+            <p className={aboutCompoView ? "about__text-description component-about-in" : "about__text-description"}>
               {getText("aboutMe", "im")} <br></br>
               {getText("aboutMe", "description")}
             </p>
@@ -434,9 +467,9 @@ function App() {
         <p id="contact" className="help">
           .
         </p>
-        <div className="contact" id="contact">
+        <div className="contact" id="contact" ref={contactCompoAnim}>
           <div className="contact__container">
-            <div className="contact__container__info">
+            <div className={contactCompoView ? "contact__container__info component-info-in" : "contact__container__info"}>
               <h2 className="contact__container__info-title">
                 {getText("contact", "info")}
               </h2>
@@ -488,17 +521,16 @@ function App() {
               </div>
             </div>
             <form
-              className="contact__container__form"
+              className={contactCompoView ? "contact__container__form component-contact-in" : "contact__container__form"}
               action="https://formsubmit.co/tomashaydu@gmail.com"
               method="POST"
             >
-              <div className="contact__container__form__section">
+              <div className="contact__container__form__section" >
                 <input
                   type="email"
                   className="contact__container__form__section-input"
                   placeholder={getText("contact", "yourEmail")}
                   name="email"
-                  onChange={(e)=> setForm(...from,e.target.name)}
                 />
               </div>
               <div className="contact__container__form__section">
@@ -532,7 +564,7 @@ function App() {
               <input type="hidden" name="_captcha" value="false" />
             </form>
           </div>
-          <footer className="footer">
+          <footer className={contactCompoView ? "footer component-footer-in" : "footer"}>
             <div className="footer__presentation">
               <p className="footer__presentation-text">
                 {getText("footer", "text")}
